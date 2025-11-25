@@ -69,6 +69,6 @@ getTax(): number {
 //bringing it hooooome - this is final price with the discount AND taxes applied
 getTotalPrice(): number {
   const getPriceWithDiscount= this.getPriceWithDiscount();
-  const tax = calculateTax(getPriceWithDiscount, this.price, this.discountPercentage)
+  const tax = calculateTax(getPriceWithDiscount, this.category)
   } 
 }
