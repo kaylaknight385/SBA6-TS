@@ -61,4 +61,14 @@ getPriceWithDiscount(): number {
   return this.price - discountAmount;
 }
 
+//calculates and return the tax amount for each produuuuct
+getTax(): number {
+  return calculateTax(this.price, this.category);
+}
+
+//bringing it hooooome - this is final price with the discount AND taxes applied
+getTotalPrice(): number {
+  const getPriceWithDiscount= this.getPriceWithDiscount();
+  const tax = calculateTax(getPriceWithDiscount, this.price, this.discountPercentage)
+  } 
 }
