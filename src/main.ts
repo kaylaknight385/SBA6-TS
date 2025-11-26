@@ -1,7 +1,7 @@
-import { Product } from '../models/Product';
-import { ApiService } from '../services/apiService';
-import { calculateDiscount } from '../utils/discountCalculator';
-import { calculateTax } from '../utils/taxCalculator';
-import { handleError } from '../utils/errorHandler';
+import { Product } from '../models/Product.js';
+import { fetchProductById, fetchProducts } from '../services/apiService.js';
+import { calculateDiscount } from '../utils/discountCalculator.js';
+import { calculateTax } from '../utils/taxCalculator.js';
+import { handleError } from '../utils/errorHandler.js';
 
 console.log('Application started');
