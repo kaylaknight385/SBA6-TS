@@ -11,7 +11,7 @@ async function main() {
     console.log("Fetching product with ID 1...\n");
     const productData = await fetchProductById(1);
     
-    // creating a new product object 
+    // creating a new product objecttt
     const product = new Product(
       productData.id,
       productData.title,
