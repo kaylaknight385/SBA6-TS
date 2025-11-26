@@ -10,7 +10,7 @@ async function main() {
         //fetch a single product by ID
         console.log("Fetching product with ID 1...\n");
         const productData = await (0, apiService_1.fetchProductById)(1);
-        // creating a new product object 
+        // creating a new product objecttt
         const product = new Product_1.Product(productData.id, productData.title, productData.description, productData.category, productData.price, productData.discountPercentage, productData.rating, productData.stock, productData.brand);
         // displays the product details 
         product.displayDetails();

@@ -1,8 +1,9 @@
 //API CALLLLING HELLO????
 
 import { ApiError} from "../utils/errorHandler"
+import fetch from "node-fetch"
 
-const BASE_URL = "https://dummyjson.com/products"
+const BASE_URL = "https://dummyjson.com"
 //storing url in base, makes it earies to change IF api moves
 
 export async function fetchProductById(id: number): Promise<any> {
