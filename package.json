@@ -1,11 +1,11 @@
 {
   "name": "sba6-ts",
   "version": "1.0.0",
-  "type": "module",
   "scripts": {
-    "dev": "tsc && node src/main.js"
+    "dev": "tsc && node dist/main.js"
   },
   "devDependencies": {
-    "typescript": "^5.0.0"
+    "typescript": "^5.0.0",
+    "@types/node": "^22.0.0"
   }
 }
