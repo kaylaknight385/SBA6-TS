@@ -1,9 +1,12 @@
+"use strict";
 //da big one...
 //importing our tools we jus maaade
-import { calculateDiscount } from "../utils/discountCalculator";
-import { calculateTax } from "../utils/taxCalculator";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Product = void 0;
+const discountCalculator_1 = require("../utils/discountCalculator");
+const taxCalculator_1 = require("../utils/taxCalculator");
 //the product class thats exported from the e-commerce system
-export class Product {
+class Product {
     //constructor are just a special function that runs when create a NEW product, not one already in the database
     constructor(id, title, description, category, price, discountPercentage, rating, stock, brand) {
         this.id = id;
@@ -32,17 +35,18 @@ export class Product {
     }
     //this function just return total price with discount applied. 
     getPriceWithDiscount() {
-        const discountAmount = calculateDiscount(this.price, this.discountPercentage);
+        const discountAmount = (0, discountCalculator_1.calculateDiscount)(this.price, this.discountPercentage);
         return this.price - discountAmount;
     }
     //calculates and return the tax amount for each produuuuct
     getTax() {
-        return calculateTax(this.price, this.category);
+        return (0, taxCalculator_1.calculateTax)(this.price, this.category);
     }
     //bringing it hooooome - this is final price with the discount AND taxes applied
     getTotalPrice() {
         const priceWithDiscount = this.getPriceWithDiscount();
-        const tax = calculateTax(priceWithDiscount, this.category);
+        const tax = (0, taxCalculator_1.calculateTax)(priceWithDiscount, this.category);
         return priceWithDiscount + tax;
     }
 }
+exports.Product = Product;

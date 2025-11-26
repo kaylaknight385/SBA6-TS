@@ -1,4 +1,7 @@
-export function calculateTax(price, category) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.calculateTax = calculateTax;
+function calculateTax(price, category) {
     //okey this is the tax cal. different from the discount cal cus it calculates taxes. */
     if (category.toLowerCase() === "groceries") {
         // .toLowerCase() makes "Groceries", "GROCERIES", "groceries" all work

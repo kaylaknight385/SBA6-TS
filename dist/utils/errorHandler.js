@@ -1,12 +1,17 @@
+"use strict";
 //iggght lets handle errors...customly...
-export class ApiError extends Error {
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiError = void 0;
+exports.handleError = handleError;
+class ApiError extends Error {
     constructor(message) {
         super(message);
         this.name = "APIERROR!";
     }
 }
+exports.ApiError = ApiError;
 //functions handles errors and logs them. tea.
-export function handleError(error) {
+function handleError(error) {
     if (error instanceof ApiError) {
         console.error(`Damn...API ERROR: ${error.message}`);
     }
